@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.SignupHowYoungScreenFragment">
+
+    <ImageView
+        android:id="@+id/img_girl_how"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/how_young" />
+
+    <ImageView
+        android:id="@+id/img_bg_how"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/how_young_screen_bg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_how_young_are"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="100dp"
+        android:text="How young are"
+        android:textColor="@color/colorWhite"
+        android:textSize="32sp"
+        android:layout_marginStart="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_you"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="you?"
+        android:textColor="@color/colorWhite"
+        android:textSize="32sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_how_young_are"
+        app:layout_constraintTop_toBottomOf="@+id/txt_how_young_are" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_age_number"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/how_young_screen_bg"
+        android:backgroundTint="@color/colorWhite"
+        android:gravity="center"
+        android:inputType="number"
+        android:maxLength="2"
+        android:padding="8dp"
+        android:text="18"
+        android:textColor="#a918b5"
+        android:textSize="20sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_how_young_are"
+        app:layout_constraintTop_toBottomOf="@+id/txt_you" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_years_old"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:text="years old"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintStart_toEndOf="@+id/edt_age_number"
+        app:layout_constraintTop_toTopOf="@+id/edt_age_number" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_mobile_number"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableTint="#f6ede8"
+        android:hint="Mobile Number"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:inputType="phone"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_age_number" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_or"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="or"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_mobile_number" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_email_user"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableTint="#f6ede8"
+        android:hint="Email Address"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_mobile_number"
+        app:layout_constraintStart_toStartOf="@+id/edt_mobile_number"
+        app:layout_constraintTop_toBottomOf="@+id/txt_or" />
+
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/edt_email_user_password"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:drawableTint="#f6ede8"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:maxLines="1"
+        android:padding="5dp"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/edt_email_user"
+        app:layout_constraintStart_toStartOf="@+id/edt_email_user"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email_user" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_how_young_next"
+        android:layout_width="240dp"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="#ede0d8"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textColor="#c480a5"
+        android:textSize="18dp"
+        app:cornerRadius="26dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintBottom_toBottomOf="@+id/img_girl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edt_email_user_password" />
+</androidx.constraintlayout.widget.ConstraintLayout>

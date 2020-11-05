@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:layout_marginVertical="100dp">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <GridLayout
+            android:id="@+id/gridlayout_cardview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:columnCount="2"
+            android:rowCount="4">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView"
+                android:layout_width="160dp"
+                android:layout_height="160dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loginscreen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/loginscreen"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView2"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail1"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/signup"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name1"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail1" />
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/signup"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail1"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted1" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ag01"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time1"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted1" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView3"
+                android:layout_width="160dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail2"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:layout_gravity="center_horizontal"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/home"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail2" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name2"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail2" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/home"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail2"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name2" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted2" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time2"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted2" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView4"
+                android:layout_width="160dp"
+                android:layout_height="170dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView3"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView2">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail3"
+                        android:layout_width="match_parent"
+                        android:layout_height="100dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loginscreen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail3" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name3"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail3" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/loginscreen"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail3"
+                        tools:srcCompat="@tools:sample/avatars" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name3" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted3" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time3"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted3" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView5"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView3">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail4"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/loginscreen"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail4" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name4"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail4" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed4"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/loginscreen"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail4" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name4" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted4" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time4"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted4" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView6"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/materialCardView5"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView4">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail5"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/how_young"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail5" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name5"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail5" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed5"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/how_young"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted5" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago5"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time5"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted5" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/materialCardView7"
+                android:layout_width="160dp"
+                android:layout_height="200dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/colorWhite"
+                android:clickable="true"
+                app:cardCornerRadius="10dp"
+                app:cardMaxElevation="5dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/materialCardView5">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/img_user_feed_thumbnail6"
+                        android:layout_width="match_parent"
+                        android:layout_height="140dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/how_young"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_user_name6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="5dp"
+                        android:text="title"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail6" />
+
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_selfie6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginTop="5dp"
+                        android:text="selfie"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_user_name6"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail6" />
+
+
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:id="@+id/img_circular_feed6"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="20dp"
+                        android:src="@drawable/how_young"
+                        app:civ_border_color="@color/colorWhite"
+                        app:civ_border_width="1dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/img_user_feed_thumbnail6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_dare_accepted6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:text="Dare accepted"
+                        android:textColor="#000"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_feed_user_name6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_feed_time6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="23"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted6" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/txt_min_ago6"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:paddingBottom="1dp"
+                        android:text="Min ago"
+                        android:textColor="@color/colorRed"
+                        android:textSize="12sp"
+                        app:layout_constraintStart_toEndOf="@+id/txt_feed_time6"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_dare_accepted6" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+
+        </GridLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

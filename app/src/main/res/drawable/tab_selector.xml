@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <!--<item android:state_focused="true"
+        android:state_pressed="false"
+        android:color="#ffffff" />
+
+    &lt;!&ndash; Focused and pressed &ndash;&gt;
+    <item android:state_focused="true"
+        android:state_pressed="true"
+        android:color="#000000" />
+
+    &lt;!&ndash; Unfocused and pressed &ndash;&gt;
+    <item android:state_focused="false"
+        android:state_pressed="true"
+        android:color="#000000" />
+
+    &lt;!&ndash; Default color &ndash;&gt;
+    <item android:color="#ffffff" />-->
+    <item
+        android:state_pressed="true"
+        android:state_focused="true"
+        android:drawable="@drawable/tab_selected_bg"
+        />
+    <!-- drawable for unselected tab -->
+    <item
+        android:state_pressed="true"
+        android:state_focused="false"
+        android:drawable="@drawable/tab_unselected_bg" />
+
+</selector>

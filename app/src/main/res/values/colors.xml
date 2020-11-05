@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="colorRed">#fc4848</color>
+
+    <!--home screen color codes-->
+    <color name="colorHomeBgStart">#7977f4</color>
+    <color name="colorHomeBgEnd">#f4bc9a</color>
+    <color name="colorAlreadyMember">#d48a8f</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorSignUp">#ac85ba</color>
+    <color name="colorContineWithFB">#8287c0</color>
+
+    <!--sign up screen color codes-->
+
+    <color name="colorSignUpBgStart">#ec92b5</color>
+    <color name="colorSignUpBgEnd">#df942e</color>
+</resources>

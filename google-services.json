@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "907708631725",
+    "firebase_url": "https://infotainmenttask.firebaseio.com",
+    "project_id": "infotainmenttask",
+    "storage_bucket": "infotainmenttask.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:907708631725:android:55c38f63132f7e4d56d424",
+        "android_client_info": {
+          "package_name": "com.example.infotainmenttask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "907708631725-5snu6a5qr3io4e08vlr0ilsk3lr9nbj7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDRNDR_HAbOfX7HqKwNG1DZCX6-mHmwjR0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "907708631725-5snu6a5qr3io4e08vlr0ilsk3lr9nbj7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

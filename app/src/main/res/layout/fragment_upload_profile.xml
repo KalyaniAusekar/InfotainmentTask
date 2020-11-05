@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".fragments.UploadProfileFragment">
+
+    <ImageView
+        android:id="@+id/img_girl"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:adjustViewBounds="true"
+        android:alpha="0.5"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/profile_img_back" />
+
+    <ImageView
+        android:id="@+id/img_bg"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:alpha="0.8"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/upload_profile_bg" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_show_world"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="100dp"
+        android:text="Show the world"
+        android:textColor="@color/colorWhite"
+        android:textSize="34sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_your_self"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Your best self."
+        android:textColor="@color/colorWhite"
+        android:textSize="34sp"
+        app:layout_constraintStart_toStartOf="@+id/txt_show_world"
+        app:layout_constraintTop_toBottomOf="@+id/txt_show_world" />
+
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/img_upload_profile"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="30dp"
+        android:padding="5dp"
+        android:src="@drawable/ic_round_person_outline_24"
+        app:civ_border_color="#fff"
+        app:civ_border_width="2dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_your_self" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_upload_your_prof_pic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Upload your profile picture"
+        android:textColor="@color/colorWhite"
+        android:textSize="20sp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/img_upload_profile" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn_upload_profile_confirm"
+        android:layout_width="240dp"
+        android:layout_height="?attr/actionBarSize"
+        android:backgroundTint="#ede0d8"
+        android:text="Confirm"
+        android:textAllCaps="false"
+        android:textColor="@color/colorSignUpBgEnd"
+        android:textSize="18sp"
+        app:cornerRadius="26dp"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_upload_your_prof_pic" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/txt_upload_back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:textColor="@color/colorWhite"
+        android:textSize="24sp"
+        app:layout_constraintVertical_bias="0.2"
+        app:layout_constraintBottom_toBottomOf="@+id/img_girl"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_upload_profile_confirm" />
+</androidx.constraintlayout.widget.ConstraintLayout>
